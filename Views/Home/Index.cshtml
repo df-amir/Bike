@@ -1,0 +1,144 @@
+﻿@using Bike.Models;
+@using System.Data.Entity;
+@{
+    ViewBag.Title = "Bike";
+}
+<div class="slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 nopadding">
+                <div class="slider-box">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="~/Content/img/M1slider.jpg" style="height:650px;width:100%;" />
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="~/Content/img/M2slider.jpg" style="height:650px;width:100%;" />
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="~/Content/img/M3slider.jpg" style="height:650px;width:100%;" />
+                                <div class="carousel-caption">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="introduct">
+                <h1>خرید کالا ارزان با بهترین کیفیت</h1>
+                <h2>سایت امیر شاپ</h2>
+                <p>
+                    محصولاتی مثل انواع لباس مثل لباس مجلسی زنانه و مردانه، لباس راحتی، لباس ورزشی، اکسسوری، کیف، کفش، عینک آفتابی، لباس زیر، شال و روسری و... جزو مواردی هستند که می‌توانید آن‌ها را از برندهای مطرح ایرانی و خارجی موجود در امیر شاپ مثل آدیداس، نایکی، دبنهامز، آلدو، درسا و... خریداری کنید.
+                    یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه اینترنتی امیر شاپ سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود را داشته باشد.
+                    تقریبا می‌توان گفت محصولی وجود ندارد که امیر شاپ برای مشتریان خود در سراسر کشور فراهم نکرده باشد. شما می‌توانید در تمامی روزهای هفته و تمامی شبانه روز یا در روزهای خاصی مثل حراج شگفت انگیز امیر شاپ که محصولات دارای تخفیف عالی می‌شوند، سفارش خود را به سادگی ثبت کرده و در روز و محدوده زمانی مناسب خود، درب منزل تحویل بگیرید. بعضی از گروه‌های اصلی و زیر مجموعه‌های پرطرفدار محصولات امیر شاپ شامل مواردی می‌شود که در ادامه به معرفی آن‌ها می‌پردازیم.
+                </p>
+            </div>
+            <div class="products">
+                <div class="row">
+                    <div class="title">
+                        <span>آخرین محصولات</span>
+                    </div>
+                 
+                        <div class="col-md-4">
+                            <div class="product-body text-center">
+                                <a href="#">
+                                    <figure>
+                                        <img src="" alt="">
+                                        <figcaption></figcaption>
+                                    </figure>
+                                    <h3>name</h3>
+                                    <span>1000$</span>
+                                </a>
+                                <a class="btn btn-success btn-sm" onclick="AddToCart(1)" style="margin-top:10px;"><i class="fa fa-plus-square"></i> افزودن به سبد خرید</a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="index-offer">
+                <span class="offer-title">پیشنهاد ویژه</span>
+                <div class="offer-slider owl-carousel owl-theme">
+               
+                        <div class="item">
+                            <a href="#">
+                                <img src="" alt="">
+                                <del>1200$</del>
+                                <p>1000$</p>
+                                <h4>Name</h4>
+                            </a>
+                            <a class="btn btn-success btn-sm" onclick="AddToCart(1)" style="margin-top:10px;"><i class="fa fa-plus-square"></i> افزودن به سبد خرید</a>
+                        </div>
+                    
+                </div>
+                <div class="counter" data-minutes-left="1000"></div>
+            </div>
+
+            <div class="index-blog">
+                <span class="blog-title">دسته‌بندی ها</span>
+                <ul>
+                    <li>
+                        <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>kalaGroupName</span>
+                                            <span class="badge">kalaGroupKalaCount</span>
+                                        </a>
+                                            <ul style="margin-right:30px;">
+                                                    <li>
+                                                        <a href="#">
+                                                            <span>kalaGroup2Name</span>
+                                                            <span class="badge">kalaGroup2KalaCount</span>
+                                                        </a>
+                                                            <ul style="margin-right:30px;">
+                                                                    <li>
+                                                                        <a href="">
+                                                                            <span>kalaGroup3Name</span>
+                                                                            <span class="badge">kalaGroup3KalaCount</span>
+                                                                        </a>
+                                                                            <ul style="margin-right:30px;">
+                                                                                    <li>
+                                                                                        <a href="#">
+                                                                                            <span>kalaGroup4Name</span>
+                                                                                            <span class="badge">kalaGroup4KalaCount</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                            </ul>
+                                                                    </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

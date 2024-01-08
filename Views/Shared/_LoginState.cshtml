@@ -1,0 +1,21 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <p>
+        @if (User.IsInRole("Admin"))
+        {
+            <a href="@Url.Action("Index", "AdminHome", new { area = "Admin" }, null)" class="btn btn-primary btn-sm">Control panel</a>
+            <span>|</span>
+        }
+        else
+        {
+            <a href="@Url.Action("Details", "UserInformations", new { email = User.Identity.Name }, null)" class="btn btn-primary btn-sm">User panel</a>
+            <span>|</span>
+        }
+    <a href="@Url.Action("LogOff", "Home")" class="btn btn-danger btn-sm">LogOut</a> | @User.Identity.Name Wellcom
+    </p>
+}
+else
+{
+    <p><a href="@Url.Action("Register", "Home")" class="btn btn-success btn-sm">Register</a> | <a href="@Url.Action("Login", "Home")" class="btn btn-primary btn-sm">Login</a></p>
+
+}
