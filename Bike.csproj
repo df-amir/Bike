@@ -216,9 +216,6 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Shared\_LoginState.cshtml" />
-    <Content Include="Views\Home\sss.cshtml" />
-    <Content Include="Views\Home\fff.cshtml" />
-    <Content Include="Views\Home\dcdc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
